@@ -1,0 +1,24 @@
+name: Deploy index.html to Server
+
+on:
+  push:
+    branches:
+      - main  # Запускаем Action при каждом пуше в ветку main. Измените при необходимости.
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_KEY }}
+
+      - name: Copy index.html to server
+        run: |
+          scp -o StrictHostKeyChecking=no index.html ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
+          
