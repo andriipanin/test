@@ -1,0 +1,98 @@
+.form-box {
+
+	&__caption {
+
+		@include break(super-small) {
+
+		}
+	}
+
+	&__row {
+		display         : flex;
+		justify-content : space-between;
+		align-items     : center;
+
+		@include break(small) {
+			flex-wrap     : wrap;
+			margin-bottom : 0;
+		}
+	}
+
+	&__form-control {
+		position    : relative;
+		display     : flex;
+		align-items : flex-start;
+		width       : 100%;
+
+		&.w50 {
+			width : calc(50% - 10px);
+
+			&:not(:last-child){
+				margin-right : 20px;
+
+				@include break(ss-small){
+					width : 100%;
+					margin-right : 0;
+				}
+			}
+
+			@include break(small) {
+				width : 100%;
+			}
+
+		}
+
+		@include break(tablet) {
+			width : 100%;
+		}
+		@include break(small) {
+			margin-bottom : 16px;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="number"],
+		input[type="tel"],
+		textarea,
+		input[type="password"] {
+			appearance    : none;
+			width         : 100%;
+			font-style    : normal;
+			font-weight   : 300;
+			font-size     : 15px;
+			line-height   : 1.25;
+			color         : #3F4144;
+			height        : 48px;
+			background    : none;
+			border        : 1px solid transparent;
+			background    : #FFFFFF;
+			border-radius : 25px;
+			padding       : 0 25px;
+
+			&:-webkit-autofill,
+			&:-webkit-autofill:hover,
+			&:-webkit-autofill:focus,
+			&:-webkit-autofill:active {
+				-webkit-box-shadow : 0 0 0 30px #FFFFFF inset !important;
+			}
+
+			&::placeholder {
+				color : #011826;
+			}
+
+			@include break(tablet) {
+				font-size : 14px;
+			}
+			@include break(small) {
+				height : 46px;
+			}
+
+		}
+
+		textarea {
+			height      : 100px;
+			padding-top : 14px;
+			resize      : none;
+		}
+	}
+}

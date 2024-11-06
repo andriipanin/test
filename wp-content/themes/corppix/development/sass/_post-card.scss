@@ -1,0 +1,186 @@
+.post-card{
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  @include break(tablet){
+    border-radius: 5px;
+  }
+  &::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid $purple;
+    border-radius: 8px;
+    z-index: 1;
+  }
+  &:hover{
+    img{
+      transform: scale(1.1);
+    }
+  }
+  &__image-wrapper{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    img{
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: .3s linear;
+    }
+  }
+  &__category{
+    position: absolute;
+    left: 17px;
+    top: 16px;
+    padding: 3px 13px;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 18px;
+    color: $navy;
+    text-align: center;
+    text-transform: capitalize;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 36px;
+    @include break(tablet){
+      left: 10px;
+      top: 9px;
+    }
+  }
+  &__wrapper{
+    padding: 20px 35px 30px;
+    position: relative;
+    z-index: 10;
+    @include break(tablet){
+      padding: 15px 20px;
+    }
+    @include break(x-small){
+      padding: 20px 30px 25px 30px;
+    }
+    @include break(small-360){
+      padding: 20px 20px 25px 20px;
+    }
+  }
+  &__tags{
+    font-size: 16px;
+    line-height: 27px;
+    color: $purple;
+    margin-bottom: 15px;
+    @include break(tablet){
+      font-size: 13px;
+      line-height: 18px;
+      margin-bottom: 7px;
+    }
+    @include break(x-small){
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  &__title{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 10px;
+    @include break(tablet){
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 5px;
+    }
+    @include break(x-small){
+      font-size: 20px;
+      line-height: 25px;
+    }
+    a{
+      text-decoration: none;
+      color: $navy;
+      transition: .3s linear;
+      &:hover{
+        color: $purple;
+      }
+    }
+  }
+  &__author{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 15px;
+    opacity: 0.5;
+    @include break(tablet){
+      font-size: 13px;
+      line-height: 18px;
+      margin-bottom: 7px;
+    }
+    @include break(x-small){
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  &__excerpt-wrapper{
+    margin-bottom: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #EFEFEF;
+    @include break(tablet){
+      padding-top: 7px;
+      margin-bottom: 30px;
+    }
+    @include break(x-small){
+      margin-bottom: 10px;
+      padding-top: 12px;
+    }
+  }
+  &__excerpt{
+    font-size: 15px;
+    line-height: 20px;
+    max-width: 92%;
+    margin: 0;
+    padding: 0;
+    @include break(tablet){
+      font-size: 13px;
+      line-height: 18px;
+      max-width: 98%;
+    }
+    @include break(x-small){
+      font-size: 16px;
+      line-height: 22px;
+      max-width: none;
+    }
+  }
+  &__read{
+    color: $purple;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: capitalize;
+    text-decoration: none;
+    position: relative;
+    @include break(tablet){
+      font-size: 13px;
+      line-height: 18px;
+    }
+    @include break(x-small){
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &::before{
+      content: '';
+      display: block;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      background-color: $purple;
+      transition: .3s linear;
+      position: absolute;
+      top: 100%;
+    }
+    &:hover::before{
+      width: 0;
+    }
+  }
+}

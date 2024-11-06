@@ -1,0 +1,47 @@
+.partners-block {
+	background: $gray;
+	padding : 0 0 80px;
+	position : relative;
+
+	@include break(tablet) {
+		padding-bottom: 40px;
+	}
+
+	@include break(small) {
+		padding-bottom : 20px;
+	}
+
+	&__title {
+		text-align : left;
+		margin-bottom : 20px;
+
+		position : relative;
+		z-index : 23;
+
+		@include break(small) {
+			text-align : center;
+			margin-bottom : 15px;
+		}
+	}
+
+	&__container {
+		overflow: hidden;
+
+		@include break(s-small) {
+			overflow: auto;
+		}
+	}
+
+	&__item {
+		opacity: 0.7;
+		text-align : center;
+	}
+
+	&__slider {
+		@include break(s-small) {
+			max-width: 270px;
+			margin : 0 auto;
+		}
+	}
+
+}

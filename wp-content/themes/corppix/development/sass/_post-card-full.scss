@@ -1,0 +1,242 @@
+.post-card-full{
+  border: 1px solid #AC8AF4;
+  border-radius: 8px;
+  padding: 25px 25px 25px 65px;
+  display: grid;
+  grid-template-columns: 275px 1fr;
+  @include break(tablet){
+    padding: 25px 25px 19px 45px;
+    grid-template-columns: 175px 1fr;
+  }
+  @include break(ss-small){
+    padding: 25px 25px 19px 25px;
+  }
+  @include break(s-small){
+    grid-template-columns: 1fr;
+    padding: 35px 27px 30px 27px;
+  }
+  &:not(:last-child){
+    margin-bottom: 15px;
+    @include break(tablet){
+      margin-bottom: 10px;
+    }
+    @include break(s-small){
+      margin-bottom: 25px;
+    }
+  }
+  &__side{
+    padding-right: 18px;
+    position: relative;
+    min-height: 145px;
+    padding-top: 20px;
+    @include break(tablet){
+      padding-top: 5px;
+      min-height: 135px;
+    }
+    @include break(s-small){
+      min-height: auto;
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 15px;
+    }
+    &::after{
+      content: '';
+      display: block;
+      width: 1px;
+      height: 135px;
+      background-color: #EFEFEF;
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include break(s-small){
+        width: 100%;
+        height: 1px;
+        left: 0;
+        right: auto;
+        top: auto;
+        bottom: 0;
+      }
+    }
+  }
+  &__category{
+    font-size: 16px;
+    line-height: 20px;
+    color: $purple;
+    margin-bottom: 15px;
+    @include break(tablet){
+      margin-bottom: 8px;
+      font-size: 13px;
+      line-height: 14px;
+    }
+    @include break(s-small){
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+  &__title{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 15px;
+    @include break(tablet){
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 8px;
+    }
+    @include break(s-small){
+      font-size: 20px;
+      line-height: 24px;
+    }
+    a{
+      text-decoration: none;
+      color: $navy;
+      transition: .3s linear;
+      &:hover{
+        color: $purple;
+      }
+    }
+  }
+  &__author{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    opacity: 0.5;
+    @include break(tablet){
+      font-size: 13px;
+      line-height: 14px;
+    }
+    @include break(s-small){
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+  &__wrapper{
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 53px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include break(tablet){
+      padding-left: 40px;
+      padding-right: 20px;
+      padding-top: 25px;
+    }
+    @include break(ss-small){
+      padding-left: 20px;
+      padding-right: 0;
+    }
+    @include break(s-small){
+      padding-left: 0;
+      padding-top: 20px;
+    }
+  }
+  &__excerpt-wrapper{
+    margin-bottom: 23px;
+    @include break(tablet){
+      margin-bottom: 25px;
+    }
+    @include break(s-small){
+      margin-bottom: 12px;
+      order: 1;
+    }
+  }
+  &__excerpt{
+    font-size: 20px;
+    line-height: 27px;
+    @include break(tablet){
+      font-size: 13px;
+      line-height: 18px;
+    }
+    @include break(s-small){
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  &__tags{
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 30px;
+    @include break(tablet){
+      padding-right: 60px;
+    }
+    @include break(small){
+      padding-right: 70px;
+    }
+    @include break(s-small){
+      padding-right: 0;
+      order: 3;
+    }
+  }
+  &__tag{
+    margin-bottom: 6px;
+    padding: 3px 13px;
+    background: $violet;
+    border-radius: 35px;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 18px;
+    @include break(tablet){
+      font-size: 11px;
+      line-height: 15px;
+      padding: 5px 13px;
+      border-radius: 25px;
+    }
+    @include break(s-small){
+      font-size: 13px;
+      line-height: 18px;
+    }
+    &:not(:last-child){
+      margin-right: 10px;
+    }
+    
+  }
+  &__read-wrapper{
+    position: absolute;
+    bottom: 6px;
+    right: 0;
+    @include break(tablet){
+      bottom: 8px;
+    }
+    @include break(s-small){
+      position: relative;
+      right: auto;
+      bottom: auto;
+      margin-bottom: 22px;
+      order: 2;
+    }
+  }
+  &__read{
+    position: relative;
+    color: $purple;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: capitalize;
+    text-decoration: none;
+    @include break(tablet){
+      font-size: 13px;
+      line-height: 18px;
+    }
+    @include break(s-small){
+      font-size: 16px;
+      line-height: 22px;
+      
+    }
+    &::before{
+      content: '';
+      display: block;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      background-color: $purple;
+      transition: .3s linear;
+      position: absolute;
+      top: 100%;
+    }
+    &:hover::before{
+      width: 0;
+    }
+  }
+}

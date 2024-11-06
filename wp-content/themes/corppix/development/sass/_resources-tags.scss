@@ -1,0 +1,124 @@
+.resources-tags-section{
+  margin-top: 50px;
+  margin-bottom: 20px;
+  @include break(tablet){
+    margin-top: 45px;
+    margin-bottom: 15px;
+  }
+  @include break(s-small){
+    margin-top: 55px;
+  }
+  &__container{
+    @include break(tablet){
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+    @include break(s-small){
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    @include break(small-360){
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  &__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    @include break(large1650){
+      max-width: 700px;
+    }
+    @include break(large1470){
+      max-width: 500px;
+    }
+    @include break(tablet){
+      max-width: 600px;
+    }
+    @include break(x-small){
+      &-limited{
+        max-height: 84px;
+        overflow: hidden;
+        transition: 0.5s linear;
+        &.active{
+          max-height: none;
+        }
+      }
+    }
+  } 
+  .show-tags{
+    font-size: 16px;
+    line-height: 28px;
+    position: relative;
+    padding: 0 20px 0 0;
+    background-color: transparent;
+    border: 0;
+    display: none;
+    @include break(x-small){
+      display: block;
+    }
+    &.active::after{
+      transform: rotate(-180deg);
+    }
+    &::after{
+      content: '';
+      display: block;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.42504 0.821733C1.19116 0.58699 0.811258 0.586294 0.576514 0.820179C0.341771 1.05406 0.341074 1.43396 0.574959 1.6687L1.42504 0.821733ZM6.00009 6.26367L5.57505 6.68716C5.68938 6.80191 5.84526 6.86556 6.00723 6.86363C6.16921 6.8617 6.32352 6.79436 6.43509 6.67692L6.00009 6.26367ZM11.4352 1.41367C11.6634 1.17342 11.6537 0.793648 11.4134 0.565417C11.1732 0.337186 10.7934 0.346923 10.5652 0.587167L11.4352 1.41367ZM0.574959 1.6687L5.57505 6.68716L6.42513 5.84019L1.42504 0.821733L0.574959 1.6687ZM6.43509 6.67692L11.4352 1.41367L10.5652 0.587167L5.56509 5.85042L6.43509 6.67692Z' fill='%230D2D5F'/%3E%3C/svg%3E%0A");
+      width: 12px;
+      height: 7px;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 0;
+      top: 10px;
+      transition: .3s linear;
+    }
+  }
+  &__tag-label{
+    margin-bottom: 15px;
+    @include break(tablet){
+      margin-bottom: 20px;
+    }
+    @include break(s-small){
+      margin-bottom: 12px;
+    }
+    &:not(:last-child){
+      margin-right: 15px;
+      @include break(tablet){
+        margin-right: 20px;
+      }
+      @include break(s-small){
+        margin-right: 16px;
+      }
+    }
+  }
+  &__tag-name{
+    padding: 5px 14px;
+    color: $purple;
+    display: block;
+    border: 1px solid $purple;
+    border-radius: 25px;
+    background-color: $white;
+    letter-spacing: 0.02em;
+    font-size: 12px;
+    text-transform: capitalize;
+    line-height: 16px;
+    cursor: pointer;
+    transition: .3s linear;
+    @include break(tablet){
+      font-size: 13px;
+      line-height: 18px;
+    }
+    &:hover{
+      background-color: $purple;
+      color: $white;
+    }
+  }
+  &__tag{
+    display: none !important;
+    &:checked + span{
+      background-color: $purple;
+      color: $white;
+    }
+  }
+}

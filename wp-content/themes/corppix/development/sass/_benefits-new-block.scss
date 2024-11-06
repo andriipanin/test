@@ -1,0 +1,108 @@
+.benefits-new-section{
+  text-align: center;
+  padding-top: 60px;
+	padding-bottom: 120px;
+  @include break(large1750){
+    padding-bottom: 80px;
+  }
+	@include break(medium){
+		padding-top: 60px;
+		padding-bottom: 105px;
+	}
+  &__container{
+    @include break(medium850){
+			padding-left: 35px;
+			padding-right: 35px;
+		}
+  }
+  &__title{
+    font-size: 50px;
+    line-height: 68px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    @include break(medium850){
+      font-size: 30px;
+      line-height: 41px;
+    }
+  }
+  &__text{
+    font-size: 28px;
+    line-height: 38px;
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    @include break(medium850){
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+  &__list{
+    margin-top: 66px;
+    display: flex;
+    justify-content: space-between;
+    @include break(medium850){
+      margin-top: 55px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .benefit{
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 400px;
+    width: 100%;
+    @include break(medium850){
+      &:not(:last-child){
+        margin-bottom: 64px;
+      }
+    }
+    &__icon{
+      width: 154px;
+      height: 154px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 28px;
+      margin-left: auto;
+      margin-right: auto;
+      @include break(desktop){
+        margin-bottom: 20px;
+        width: 118px;
+        height: 118px;
+      }
+    }
+    &__image{
+      max-width: 100%;
+      height: auto;
+      transition: .3s linear;
+    }
+    &__title{
+      font-size: 32px;
+      line-height: 43px;
+      margin-bottom: 25px;
+      min-height: 86px;
+      @include break(large1370){
+        min-height: 129px;
+      }
+      @include break(desktop){
+        font-size: 20px;
+        line-height: 27px;
+        margin-bottom: 12px;
+        min-height: 54px;
+      }
+      @include break(medium850){
+        min-height: auto;
+      }
+    }
+    &__text{
+      font-size: 22px;
+      line-height: 30px;
+      text-align: center;
+      @include break(desktop){
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+}

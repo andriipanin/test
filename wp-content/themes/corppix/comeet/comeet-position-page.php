@@ -1,0 +1,1 @@
+<?php include 'comeet-position-page-common.php' ?>

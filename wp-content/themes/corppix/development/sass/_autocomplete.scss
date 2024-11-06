@@ -1,0 +1,28 @@
+.aa-dropdown-menu{
+  color: $navy !important;
+  border-radius: 4px;
+  margin-top: 5px;
+  a{
+    color: $navy !important;
+    transition: .3s linear;
+    &:hover{
+      color: $purple !important;
+    }
+  }
+  a.suggestion-link{
+    &-term{
+      .suggestion-post-title{
+        padding-top: 2px;
+      }
+      svg{
+        fill: $navy !important;
+      }
+    }
+  }
+  .aa-suggestion{
+    em{
+      background-color: #F2C94C !important;
+	    color: $navy !important;
+    }
+  }
+}

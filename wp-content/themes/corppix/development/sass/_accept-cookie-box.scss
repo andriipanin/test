@@ -1,0 +1,111 @@
+.accept-cookie-box {
+  z-index: 2000;
+  position: fixed;
+  bottom: 0;
+  transform: translateY(100%);
+  left: 0;
+  width: 100%;
+  padding: 10px 80px 10px 105px;
+  background-color: rgba(13, 45, 95, 0.9);
+  mix-blend-mode: normal;
+  transition: .3s linear;
+  @include break(large1650) {
+    padding: 10px 80px;
+  }
+  @include break(desktop) {
+    padding: 10px 30px;
+  }
+  @include break(medium){
+    padding: 50px 25px 45px;
+  }
+  &.opened{
+    transform: translateY(0);
+  }
+  &__container{
+    position: relative; 
+    padding-right: 55px;
+    max-width: 2000px;
+    margin: 0 auto;
+    @include break(large1650) {
+      padding-right: 30px;
+    }
+    @include break(medium) {
+      padding-right: 0;
+    }
+  }
+  &__close-btn{
+    position: absolute;
+    right: 80px;
+    top: 25px;
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    transition: .3s linear;
+    cursor: pointer;
+    &:hover{
+      opacity: 0.8;
+    }
+    svg{
+      pointer-events: none;
+    }
+    @include break(desktop){
+      right: 25px;
+    }
+    @include break(medium){
+      right: 16px;
+      top: 16px;
+    }
+  }
+  &__inner{
+    display: flex;
+    align-items: center;
+    @include break(medium){
+      flex-direction: column-reverse;
+    }
+  }
+  &__text{
+    color: $white;
+    font-size: 16px;
+    line-height: 22px;
+    @include break(medium){
+      text-align: center;
+    }
+  }
+  &__accept-btn{
+    margin-right: 55px;
+    -webkit-appearance : none;
+    -moz-appearance    : none;
+    appearance         : none;
+    background         : transparent;
+    border-radius      : 100px;
+    display            : inline-flex;
+    align-items        : center;
+    cursor             : pointer;
+    justify-content    : center;
+    padding            : 10px 38px;
+    font-family        : Satoshi, sans-serif;
+    font-style         : normal; 
+    font-weight        : normal;
+    font-size          : 20px;
+    line-height        : 28px;
+    color              : #FFFFFF;
+    text-decoration    : none;
+    border             : 2px solid #fff;
+    text-align         : center;
+    transition         : all 0.4s ease;
+    white-space: nowrap;
+    @include break(large1470){
+      margin-right: 30px;
+    }
+    @include break(medium){
+      margin-top: 40px;
+      margin-right: 0;
+    }
+    &:hover {
+      background-color : #fff;
+      color: $navy;
+    }
+  }
+}

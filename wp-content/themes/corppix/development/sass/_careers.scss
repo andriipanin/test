@@ -1,0 +1,373 @@
+.careers-content-section{
+  margin-top: 80px;
+  margin-bottom: 110px;
+  @include break(desktop){
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  &__container{
+    p{
+      @include break(desktop) {
+        font-size : 22px;
+        line-height: 26px;
+      }
+    }
+  }
+  &__wrapper{
+    max-width: 1115px;
+    margin-left: auto;
+    margin-right: auto;
+    @include break(large1650) {
+      max-width: 1005px;
+    }
+    @include break(large1470) {
+      max-width: 840px;
+    }
+    @include break(x-small){
+      max-width: 305px;
+    }
+  }
+}
+.comeet-departments-section{
+  margin-bottom: 130px;
+  @include break(tablet){
+    margin-bottom: 80px;
+  }
+  &__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 35px;
+    grid-column-gap: 35px;
+    row-gap: 35px;
+    column-gap: 35px;
+    @include break(desktop){
+      grid-row-gap: 20px;
+      grid-column-gap: 20px;
+      row-gap: 20px;
+      column-gap: 20px;
+    }
+    @include break(desktop){
+      grid-template-columns: 1fr 1fr;
+    }
+    @include break(x-small){
+      grid-template-columns: 1fr;
+    }
+  }
+  &__department{
+    border: 1px solid #AC8AF4;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("data:image/svg+xml,%3Csvg width='370' height='227' viewBox='0 0 370 227' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M322.336 26.4332C322.336 26.4332 331.207 34.7009 338.373 35.5129C346.14 36.3865 351.429 31.4406 351.429 26.4332C351.429 21.4258 345.833 15.508 338.373 17.3411C331.367 19.0759 322.336 26.4332 322.336 26.4332Z' fill='%23D8CEF5'/%3E%3Cpath d='M326.767 26.4213L311 17.3047V35.5503L326.767 26.4213Z' fill='%23D8CEF5'/%3E%3Cpath d='M52.3359 173.433C52.3359 173.433 61.2072 181.701 68.373 182.513C76.1401 183.386 81.4286 178.441 81.4286 173.433C81.4286 168.426 75.8333 162.508 68.373 164.341C61.3667 166.076 52.3359 173.433 52.3359 173.433Z' fill='%23D8CEF5'/%3E%3Cpath d='M56.7672 173.421L41 164.305V182.55L56.7672 173.421Z' fill='%23D8CEF5'/%3E%3Cpath d='M314.289 111.233C314.289 111.233 319.211 115.82 323.186 116.271C327.495 116.755 330.429 114.012 330.429 111.233C330.429 108.455 327.325 105.172 323.186 106.189C319.299 107.152 314.289 111.233 314.289 111.233Z' fill='%23D8CEF5'/%3E%3Cpath d='M316.748 111.227L308 106.169V116.291L316.748 111.227Z' fill='%23D8CEF5'/%3E%3Cpath d='M44.2891 38.2335C44.2891 38.2335 49.2108 42.8203 53.1863 43.2708C57.4954 43.7554 60.4294 41.0115 60.4294 38.2335C60.4294 35.4554 57.3252 32.1722 53.1863 33.1893C49.2993 34.1517 44.2891 38.2335 44.2891 38.2335Z' fill='%23D8CEF5'/%3E%3Cpath d='M46.7475 38.2268L38 33.1689V43.2915L46.7475 38.2268Z' fill='%23D8CEF5'/%3E%3Cpath d='M94.2891 207.233C94.2891 207.233 99.2108 211.82 103.186 212.271C107.495 212.755 110.429 210.012 110.429 207.233C110.429 204.455 107.325 201.172 103.186 202.189C99.2993 203.152 94.2891 207.233 94.2891 207.233Z' fill='%23D8CEF5'/%3E%3Cpath d='M96.7475 207.227L88 202.169V212.291L96.7475 207.227Z' fill='%23D8CEF5'/%3E%3Cpath d='M276.867 70.5282C276.867 70.5282 292.411 85.0143 304.966 86.437C318.575 87.9676 327.841 79.3017 327.841 70.5282C327.841 61.7546 318.038 51.3858 304.966 54.5977C292.69 57.6372 276.867 70.5282 276.867 70.5282Z' fill='%23D8CEF5'/%3E%3Cpath d='M284.626 70.5067L257 54.5332V86.5019L284.626 70.5067Z' fill='%23D8CEF5'/%3E%3Ccircle cx='23' cy='131' r='4.75' stroke='%23744BDA' stroke-width='0.5'/%3E%3Ccircle cx='169' cy='176' r='4.75' stroke='%23744BDA' stroke-width='0.5'/%3E%3Ccircle cx='258' cy='22' r='4.75' stroke='%23744BDA' stroke-width='0.5'/%3E%3Ccircle cx='301' cy='160' r='6.75' stroke='%23744BDA' stroke-width='0.5'/%3E%3Ccircle cx='134.5' cy='27.5' r='15.25' stroke='%23744BDA' stroke-width='0.5'/%3E%3Cmask id='mask0_3509_22841' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='70' width='33' height='46'%3E%3Crect y='70' width='33' height='46' fill='%23C4C4C4'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_3509_22841)'%3E%3Ccircle cx='3.5' cy='93.5' r='15.25' stroke='%23744BDA' stroke-width='0.5'/%3E%3C/g%3E%3Ccircle cx='323.5' cy='187.5' r='15.25' stroke='%23744BDA' stroke-width='0.5'/%3E%3C/svg%3E%0A");
+    background-size: cover;
+    background-position: center left;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    color: $navy;
+    height: 280px;
+    width: 100%;
+    padding: 30px;
+    @include break(large1470) {
+      height: 230px;
+    }
+    @include break(tablet) {
+      padding: 20px;
+      height: 185px;
+      background-size: contain;
+    }
+    @include break(x-small){
+      background-size: cover;
+    }
+    @include break(small-375){
+      background-size: contain;
+    }
+    &:hover{
+      .comeet-departments-section__name{
+        color: $purple;
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__name{
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    line-height: 33px;
+    margin-right: 30px;
+    transition: .3s linear;
+    @include break(s-small){
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+}
+.comeet-positions-section{
+  margin-top: 20px;
+  margin-bottom: 205px;
+  @include break(large1650) {
+    margin-top: 35px;
+    margin-bottom: 130px;
+  }
+  @include break(desktop) {
+    margin-bottom: 80px;
+  }
+  &__container{
+    
+  }
+  &__openings{
+    text-align: center;
+    @include break(desktop) {
+      font-size : 22px;
+      line-height: 26px;
+    }
+  }
+  &__wrapper{
+    margin-top: 55px;
+    @include break(desktop) {
+      margin-top: 40px;
+    }
+  }
+  &__position{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 85px 20px 30px;
+    border: 1px solid #AC8AF4;
+    border-radius: 8px;
+    text-decoration: none;
+    position: relative;
+    transition: .3s linear;
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+    &:hover{
+      background-color: $purple;
+      border-color: $purple;
+      .comeet-positions-section__name,
+      .comeet-positions-section__location{
+        color: $white;
+      }
+      path{
+        fill: $white;
+      }
+    }
+    @include break(small) {
+      padding: 17px 45px 17px 16px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__name{
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 700;
+    color: $navy;
+    transition: .3s linear;
+    @include break(small) {
+      margin-bottom: 5px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  &__location{
+    font-size: 22px;
+    line-height: 28px;
+    color: $navy;
+    transition: .3s linear;
+    @include break(small) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  &__arrow{
+    width: 11px;
+    height: 21px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    display: block;
+    transform: translateY(-50%);
+    @include break(small){
+      right: 16px;
+    }
+    svg{
+      display: block;
+    }
+    path{
+      transition: .3s linear;
+    }
+  }
+}
+.comeet-single-position{
+  margin-top: 30px;
+  margin-bottom: 225px;
+  @include break(large1650){
+    margin-bottom: 150px;
+  }
+  @include break(tablet){
+    margin-bottom: 80px;
+  }
+  &__container{
+    display: grid;
+    grid-template-columns: 1fr 375px;
+    @include break(tablet){
+      grid-template-columns: 1fr;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  &__wrapper{
+    padding-right: 195px;
+    @include break(large1650){
+      padding-right: 100px;
+    }
+    @include break(large1650){
+      padding-right: 100px;
+    }
+    @include break(large1370){
+      padding-right: 60px;
+    }
+    @include break(tablet){
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    @include break(s-small){
+      margin-bottom: 50px;
+    }
+  }
+  &__name{
+    font-size: 50px;
+    line-height: 70px;
+    margin-bottom: 10px;
+    color: $navy;
+    @include break(tablet){
+      font-size: 30px;
+      line-height: 34px;
+      margin-bottom: 15px;
+    }
+  }
+  &__location{
+    font-size: 35px;
+    line-height: 47px;
+    margin-bottom: 20px;
+    @include break(tablet){
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 30px;
+    }
+  }
+  &__info{
+    &-item{
+      &:not(:last-child){
+        margin-bottom: 50px;
+      }
+      h3{
+        font-size: 30px;
+        line-height: 41px;
+        margin-bottom: 20px;
+        color: $purple;
+        margin-top: 0;
+        @include break(tablet){
+          font-size: 25px;
+          line-height: 32px;
+        }
+      }
+    }
+    &-title{
+      font-size: 30px;
+      line-height: 41px;
+      margin-bottom: 20px;
+      color: $purple;
+      margin-top: 0;
+      @include break(tablet){
+        font-size: 25px;
+        line-height: 32px;
+      }
+    }
+    &-text{
+      h1,h2,h3,h4,h5,h6{
+        text-align: inherit;
+      }
+      p{
+        margin-bottom: 15px;
+      }
+      li,
+      p{
+        font-size: 24px;
+        line-height: 30px;
+        @include break(large1650){
+          font-size: 20px;
+          line-height: 27px;
+        }
+        @include break(tablet){
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+      ul,ol{
+        margin-top: -5px;
+        margin-bottom: 20px;
+      }
+      li{
+        padding-left: 30px;
+        margin-bottom: 0;
+        &::after{
+          width: 6px;
+          height: 6px;
+          background-color: $black;
+          left: 12px;
+          top: 12px;
+          @include break(tablet){
+            top: 8px;
+          }
+        }
+      }
+      ol{
+        li{
+          margin-left: 30px;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  &__form-container{
+    @include break(tablet){
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    @include break(s-small){
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__form-wrapper{
+    box-shadow: 0px 24px 54px 10px rgba(13, 45, 95, 0.1);
+    border-radius: 39px;
+    padding: 40px 20px;
+    @include break(s-small){
+      border-radius: 21px;
+      padding: 50px 25px 45px;
+    }
+  }
+  &__form-title{
+    font-size: 25px;
+    line-height: 28px;
+    text-align: center;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    @include break(s-small){
+      font-size: 32px;
+      line-height: 47px;
+      margin-bottom: 30px;
+      width: 190px;
+    }
+  }
+  .comeet-iframe{
+    display: block;
+  }
+}

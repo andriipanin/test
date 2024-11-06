@@ -1,0 +1,97 @@
+.benefits-section-boaters {
+	text-align: center;
+	padding-top: 70px;
+	padding-bottom: 96px;
+	width: 100%;
+	max-width: 100%;
+	.benefits-section-boaters__title{
+	     font-size: 50px;
+	     font-weight: 700;
+	     line-height: 67.5px;
+	     text-align: center;
+	     @media (max-width: 991px) {
+		     font-size: 30px;
+		     line-height: 40.5px;
+	     }
+      }
+
+	&__wrap-icons {
+		margin-top: 66px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media (max-width: 991px) {
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+	}
+
+	&__container-content {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&:not(:last-child) {
+			@media (max-width: 991px) {
+				margin-bottom: 50px;
+			}
+		}
+
+		.benefits-section-boaters__benefit {
+			padding: 0 15px;
+			max-width: 400px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+
+			.benefits-section-boaters__icon {
+				margin-bottom: 20px;
+				width: 342px;
+				height: 342px;
+
+				@media (max-width: 1199px) {
+					width: 243px;
+					height: 243px;
+				}
+
+				@media (max-width: 991px) {
+					width: 153px;
+					height: 153px;
+					margin-bottom: 10px;
+				}
+
+				img {
+					max-width: 100%;
+					height: auto;
+					transition: .3s linear;
+				}
+			}
+
+
+		}
+		.benefits-section-boaters__text {
+			p {
+				font-size: 35px;
+				font-weight: 700;
+				line-height: 43.2px;
+				text-align: center;
+
+				@media (max-width: 1199px) {
+					font-size: 20px;
+					line-height: 27px;
+				}
+			}
+		}
+	}
+}
+.background-purple a , .background-navy a{
+	color:white;
+}
+.background-white a , .background-gray a , .background-violet a{
+	color:#744BDA;
+}
+

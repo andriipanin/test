@@ -1,0 +1,205 @@
+.technology-slider-section{
+  /*padding-top: 80px;
+  padding-bottom: 90px;*/
+  text-align: center;
+  @include break(large1650){
+    /*padding-top: 80px;
+    padding-bottom: 150px;*/
+  }
+  @include break(large1370){
+    &::before{
+      background-position: right 0 top 0;
+    }
+    &::after{
+      background-position: right 0 top 0;
+    }
+  }
+  @include break(medium){
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  &__title{
+    font-size: 50px;
+    line-height: 70px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    @include break(tablet){
+      font-size: 30px;
+      line-height: 41px;
+    }
+  }
+  &__text{
+    font-size: 35px;
+    line-height: 47px;
+    margin-bottom: 0;
+    @include break(large1470){
+      font-size: 30px;
+      line-height: 36px;
+    }
+    @include break(tablet){
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+  &__link{
+    margin-top: 40px;
+    @include break(medium){
+      margin-top: 30px;
+    }
+  }
+  &__slider{
+    max-width: 665px;
+    margin-left: auto;
+    margin-right: auto;
+    @include break(medium){
+      max-width: 335px;
+    }
+    .slick-dots{
+      z-index: 15;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      width: 100%;
+      height: 97px;
+      @include break(medium){
+        height: 55px;
+      }
+      li{
+        padding: 0;
+        margin: 0 35px;
+        @include break(medium){
+          margin: 0 20px;
+        }
+        button{
+          opacity: 0.3;
+          padding: 0;
+          font-size: 48px;
+          line-height: 65px;
+          text-align: center;
+          color: $navy;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          transition: .3s linear;
+          @include break(large1370){
+            font-size: 36px;
+            line-height: 46px;
+          }
+          @include break(medium){
+            font-size: 26px;
+            line-height: 36px;
+          }
+          &:before {
+            content: "0";
+          }
+        }
+        &.slick-active,
+        &:hover{
+          button{
+            opacity: 1;
+            transform: scale(1.45);
+            @include break(medium){
+              transform: scale(1.3);
+            }
+          }
+        }
+        &::after{
+          display: none;
+        }
+        &:nth-child(n + 10) button::before {
+          content: none;
+        }
+      }
+    }
+    .slick{
+      &-arrow{
+        position: absolute;
+        z-index: 20;
+        padding: 0;
+        top: 483px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        width: 31px;
+        height: 31px;
+        @include break(large1470){
+          top: 410px;
+        }
+        @include break(large1370){
+          top: 365px;
+        }
+        @include break(medium){
+          top: 266px;
+          width: 15px;
+          height: 15px;
+          svg{
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+      &-prev{
+        left: 0;
+      }
+      &-next{
+        right: 0;
+      }
+      &-disabled{
+        pointer-events: none;
+        opacity: 0.3;
+      }
+      
+    }
+  }
+  &__image-wrapper{
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    @include break(large1470){
+      height: 375px;
+    }
+    @include break(large1370){
+      height: 320px;
+    }
+    @include break(medium){
+      height: 245px;
+    }
+    img{
+      @include break(medium){
+        max-width: 280px;
+        max-height: 165px;
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+  &__slider-text-wrapper{
+    margin-top: 66px;
+    position: relative;
+    @include break(large1470){
+      margin-top: 40px;
+    }
+    @include break(medium){
+      margin-top:30px;
+    }
+  }
+  &__slider-text{
+    font-size: 30px;
+    line-height: 33px;
+    text-align: center;
+    min-height: 66px;
+    font-weight: bold;
+    margin-bottom: 0;
+    display: none;
+    @include break(medium){
+      min-height: 52px;
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+}

@@ -1,0 +1,313 @@
+.contact-form {
+
+	&__title {
+		margin-bottom : 15px;
+
+		@include break(small) {
+			font-size : 32px;
+		}
+	}
+
+	&__subtitle {
+		font-size     : 35px;
+		line-height   : 1.34;
+		text-align    : center;
+		color         : $navy;
+		margin-bottom : 100px !important;
+
+		@include break(desktop) {
+			font-size     : 25px;
+			margin-bottom : 50px !important;
+		}
+
+		@include break(small) {
+			font-size   : 22px;
+			line-height : 1.16;
+		}
+
+		br {
+			@include break(desktop) {
+				display : none;
+			}
+		}
+	}
+
+	&__row-wrapper {
+		display         : flex;
+		justify-content : space-between;
+		margin-bottom   : 60px;
+
+		@include break(desktop) {
+			margin-bottom : 40px;
+		}
+
+		@include break(small) {
+			flex-wrap     : wrap;
+			margin-bottom : 0;
+		}
+
+		&_select {
+			@include break(small) {
+				margin-bottom : 40px;
+			}
+		}
+	}
+
+	&__row {
+		width : 100%;
+	}
+
+	&__row-item {
+		width : calc(50% - 25px);
+
+		@include break(small) {
+			width         : 100%;
+			margin-bottom : 40px;
+		}
+	}
+
+	&__row-textarea {
+		margin-bottom : 90px;
+
+		@include break(desktop) {
+			margin-bottom : 40px;
+		}
+	}
+
+	&__select {
+		width : 100%;
+	}
+
+	input[type="text"],
+	input[type="tel"],
+	input[type="email"],
+	input[type="number"],
+	input[type="password"],
+	input[type="file"],
+	select,
+	textarea,
+	input[type="date"] {
+		width         : 100%;
+		font-family   : Satoshi, sans-serif;
+		font-style    : normal;
+		font-weight   : normal;
+		font-size     : 30px;
+		line-height   : 45px;
+		color         : rgba(13, 45, 95, 0.4);
+		background    : transparent;
+		border        : none;
+		border-bottom : 2px solid $purple;
+		box-sizing    : border-box;
+		border-radius : 0;
+		outline       : none;
+		appearance    : none;
+		padding       : 0;
+		&.wpcf7-not-valid {
+			border-bottom : 2px solid #dc3232;
+			color         : #dc3232;
+			font-weight   : bold;
+		}
+
+		@include break(desktop) {
+			font-size : 20px;
+			line-height: 31px;
+		}
+
+		@include break(small) {
+			font-size      : 16px;
+			/*padding-bottom : 5px;*/
+		}
+
+		&::placeholder {
+			font-size   : 30px;
+			line-height : 1.36;
+			color       : rgba(13, 45, 95, 0.4);
+
+			@include break(desktop) {
+				font-size : 20px;
+			}
+
+			@include break(small) {
+				font-size : 16px;
+			}
+		}
+	}
+
+	textarea {
+		height : 215px;
+
+		@include break(small) {
+			height : 152px;
+		}
+	}
+
+	input[type="submit"] {
+		background    : $purple;
+		border-radius : 100px;
+		text-align    : center;
+		padding       : 20px 40px;
+		font-size     : 30px;
+		line-height   : 1.32;
+		color         : #FFFFFF;
+		outline       : none;
+		appearance    : none;
+		border        : none;
+		transition    : background 0.3s;
+
+		@include break(desktop) {
+			padding   : 10px 40px;
+			font-size : 20px;
+		}
+
+		@include break(small) {
+			font-size   : 18px;
+			font-weight : normal;
+			padding     : 9px 29px;
+		}
+
+		&:hover {
+			background : #5b38b0;
+		}
+	}
+
+	.select2 {
+		width : 100% !important;
+	}
+
+	.select2-container--default .select2-selection--single {
+		border        : none;
+		border-bottom : 2px solid $purple;
+		border-radius : 0;
+    height: 47px;
+    @include break(desktop){
+      height: 33px;
+    }
+	}
+
+	.select2-container--default .select2-selection--single .select2-selection__placeholder {
+		color : rgba(13, 45, 95, 0.4);
+
+		@include break(desktop) {
+      font-size: 20px;
+      line-height: 31px;
+		}
+		@include break(small){
+			font-size: 16px;
+		}
+	}
+
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+		color          : rgba(13, 45, 95, 0.4);
+		font-size      : 30px;
+		line-height    : 45px;
+		padding        : 0;
+		display        : block;
+
+		@include break(desktop) {
+      font-size: 20px;
+      line-height: 31px;
+		}
+		@include break(small){
+			font-size: 16px;
+		}
+	}
+
+	.wpcf7-form-control-wrap.select {
+		width : 100%;
+	}
+
+	.select2-container--default .select2-selection--single .select2-selection__arrow {
+		transition : transform 0.3s;
+		background : url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAyMSAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTguOTAxIDAuMjM5ODQzTDEwLjE1NDUgOC43NjU4NEwxLjQwNzk5IDAuMjM5ODQzQzEuMjUxNzIgMC4wODcyMDM2IDEuMDQxOTQgMC4wMDE3NDk4NyAwLjgyMzQ5MSAwLjAwMTc0OTg3QzAuNjA1MDQzIDAuMDAxNzQ5ODcgMC4zOTUyNjIgMC4wODcyMDM2IDAuMjM4OTkxIDAuMjM5ODQzQzAuMTYzMzI1IDAuMzEzOTggMC4xMDMyMTMgMC40MDI0NyAwLjA2MjE3NTIgMC41MDAxMzFDMC4wMjExMzc3IDAuNTk3NzkyIDAgMC43MDI2NiAwIDAuODA4NTkyQzAgMC45MTQ1MjUgMC4wMjExMzc3IDEuMDE5MzkgMC4wNjIxNzUyIDEuMTE3MDVDMC4xMDMyMTMgMS4yMTQ3MSAwLjE2MzMyNSAxLjMwMzIgMC4yMzg5OTEgMS4zNzczNEw5LjU0Mzc0IDEwLjQ0OTNDOS43MDcxNSAxMC42MDg2IDkuOTI2MyAxMC42OTc4IDEwLjE1NDUgMTAuNjk3OEMxMC4zODI3IDEwLjY5NzggMTAuNjAxOCAxMC42MDg2IDEwLjc2NTIgMTAuNDQ5M0wyMC4wNyAxLjM3OTA5QzIwLjE0NjIgMS4zMDQ5IDIwLjIwNjggMS4yMTYxOSAyMC4yNDgxIDEuMTE4MjFDMjAuMjg5NSAxLjAyMDIyIDIwLjMxMDggMC45MTQ5NDcgMjAuMzEwOCAwLjgwODU5MkMyMC4zMTA4IDAuNzAyMjM4IDIwLjI4OTUgMC41OTY5NjEgMjAuMjQ4MSAwLjQ5ODk3N0MyMC4yMDY4IDAuNDAwOTkyIDIwLjE0NjIgMC4zMTIyODUgMjAuMDcgMC4yMzgwOTJDMTkuOTEzNyAwLjA4NTQ1MjkgMTkuNzAzOSAwIDE5LjQ4NTUgMEMxOS4yNjcgMCAxOS4wNTczIDAuMDg1NDUyOSAxOC45MDEgMC4yMzgwOTJWMC4yMzk4NDNaIiBmaWxsPSIjNzQ0QkRBIi8+PC9zdmc+) center center no-repeat;
+    top: 10px;
+		@include break(desktop) {
+			width : 14px;
+			height: 7px;
+			background-size : 100% auto;
+		}
+
+		b {
+			opacity : 0;
+		}
+	}
+
+	.select2-container--open.select2-container--default .select2-selection--single .select2-selection__arrow {
+		transform : rotate(180deg);
+	}
+	.select2-container--open .select2-dropdown--above,
+	.select2-container--open .select2-dropdown--below {
+		background    : #FFFFFF;
+		border        : 2px solid $purple;
+		box-sizing    : border-box;
+		box-shadow    : 20px 24px 60px rgba(13, 45, 95, 0.05);
+		border-radius : 21px;
+    overflow: hidden;
+    margin-top: 10px;
+	}
+	.select2-container--open .select2-dropdown--above{
+    margin-top: 0;
+  }
+	.select2-results__option {
+		margin-bottom : 0;
+		padding       : 18px 28px;
+		list-style    : none;
+		font-size     : 26px;
+		line-height   : 1.34;
+		color         : $navy;
+		text-align    : left;
+		display       : block;
+		border-bottom : 2px solid rgba(116, 75, 218, 0.2);
+
+		@include break(desktop) {
+			font-size: 20px;
+		}
+
+		@include break(small) {
+			font-size: 16px;
+			padding  : 16px; 
+		}
+
+		&:after {
+			display : none;
+		}
+	}
+
+	//.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+	//	background-color : transparent;
+	//	color            : $navy;
+	//}
+
+	.select2-container--default .select2-results > .select2-results__options {
+		max-height : 218px;
+    &::-webkit-scrollbar {
+      width: 10px;
+      cursor: pointer;
+    }
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: $white; 
+    }
+    /* Handle */ 
+    &::-webkit-scrollbar-thumb {
+      background: $purple; 
+      transition: .3s linear;
+
+    }
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: $purple; 
+    }
+	}
+
+	.select2-container {
+	
+	}
+
+	.select2-container--default .select2-selection--single .select2-selection__clear {
+		display : none;
+	}
+
+	.select2-container--default .select2-results__option--selected {
+		background-color : transparent;
+	}
+}

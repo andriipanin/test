@@ -1,0 +1,170 @@
+.faq-form-section{
+  //margin-top: 60px;
+  //margin-bottom: 135px;
+	padding-top: 122px;
+	flex-shrink: 0;
+	margin : 0 0 0 30px;
+  @include break(tablet){
+	  padding-right : 30px;
+	  padding-top: 70px;
+  }
+	@include break(small) {
+		padding : 0 10px;
+		margin : 0;
+	}
+
+  &__container{
+    @include break(medium){
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  &__wrapper{
+	  position: sticky;
+	  top: 86px;
+	  box-shadow: 0px 24px 54px 10px rgba(13, 45, 95, 0.1);
+	  border-radius: 39px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 35px 20px 45px;
+    @include break(tablet){
+	    max-width: 310px;
+      border-radius: 21px;
+    }
+
+	  @include break(small) {
+	  	max-width: 100%;
+		  padding: 50px 25px 60px;
+	  }
+  }
+  &__title{
+    margin-bottom: 40px;
+    text-align: center;
+	  font-size: 25px;
+	  line-height: 1.1;
+    @include break(tablet){
+      font-size: 32px;
+      line-height: 36px;
+      margin-bottom: 50px;
+    }
+  }
+  .form-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .form-col{
+    width: 48%;
+    margin-bottom: 60px;
+    @include break(tablet){
+      margin-bottom: 35px;
+    } 
+    @include break(x-small){
+      width: 100%;
+    }
+    &-full{
+      width: 100%;
+	    margin-bottom : 20px;
+
+	    @include break(small) {
+		    margin-bottom : 35px;
+	    }
+    }
+  }
+  .form-submit-wrapper{
+    text-align: center;
+    margin-top: 70px;
+    position: relative;
+    @include break(tablet){
+      margin-top: 40px;
+    }
+	  @include break(small) {
+		  margin-top: 5px;
+	  }
+    .wpcf7-spinner{
+      position: absolute;
+      margin: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+  .wpcf7-form{
+    &.submitting{
+      .wpcf7-submit{
+        pointer-events: none;
+        color: transparent;
+      }
+    }
+    &.invalid{
+      .wpcf7-response-output{
+        display: none;
+      }
+    }
+    .wpcf7-form-control-wrap{
+      display: block;
+      width: 100%;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    textarea{
+      width: 100%;
+	    font-size: 20px;
+	    line-height: 1.35;
+      color: $navy;
+      border: none;
+      border-bottom: 2px solid $purple;
+      font-family : Satoshi, sans-serif;
+      @include break(tablet){
+        font-size: 16px;
+        line-height: 27px;
+      }
+      &::placeholder{
+        opacity: 0.4;
+      }
+      &.wpcf7-not-valid{
+        border-color: #dc3232;
+      }
+    }
+    textarea{
+      height: 140px;
+      resize: none;
+      display: block;
+      @include break(tablet){
+        height: 155px;
+      }
+      &::placeholder{
+        opacity: 0.4;
+      }
+    }
+    .wpcf7-not-valid-tip{
+      font-size: 18px;
+      @include break(tablet){
+        font-size: 14px;
+      }
+    }
+    .wpcf7-submit{
+      @extend .btn-primary;
+	    padding : 10px 40px;
+	    font-size: 20px;
+	    line-height: 1.35;
+
+	    @include break(small) {
+		    font-size: 18px;
+		    padding : 8px 30px;
+	    }
+    }
+    .wpcf7-response-output{
+      margin: 40px 0 0 0;
+      font-size: 20px;
+      text-align: center;
+      padding: 10px;
+      @include break(tablet){
+        font-size: 16px;
+      }
+    }
+  }
+}

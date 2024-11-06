@@ -1,0 +1,128 @@
+.block-form-resources{
+  margin-top: 35px;
+  margin-bottom: 95px;
+  position: relative;
+  #sign-up-for-updates{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    visibility: hidden;
+    top: -120px;
+  }
+  &__container{
+    @include break(small){
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__wrapper{
+    padding: 80px 120px 95px 130px;
+    @include break(tablet){
+      padding: 60px 70px 65px 70px;  
+    }
+    @include break(small){
+      padding: 50px 35px 55px 35px;  
+    }
+    @include break(x-small){
+      padding: 50px 25px 55px 25px;  
+    }
+  }
+  &__title{
+    @include break(tablet){
+      font-size: 33px;
+      line-height: 47px;
+      margin-bottom: 70px;
+    }
+    @include break(small){
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+    @include break(small-360){
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+  .select2-results__option{
+    padding: 16px 16px 16px 55px;
+    position: relative;
+    @include break(tablet){
+      font-size: 16px;
+      line-height: 22px;
+      padding: 12px 12px 12px 40px;
+    }
+    &::before{
+      content: '';
+      display: block;
+      width: 25px;
+      height: 24px;
+      background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='23' height='22' rx='11' fill='white' stroke='%23744BDA' stroke-width='2'/%3E%3C/svg%3E%0A");
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 15px;
+      top: 20px;
+      @include break(tablet){
+        background-size: contain;
+        width: 17px;
+        height: 16px;
+        left: 12px;
+        top: 14px;
+      }
+    }
+    &--selected{
+      &::before{
+        background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='23' height='22' rx='11' fill='%23744BDA' stroke='%23744BDA' stroke-width='2'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+  .select2-container--default .select2-results > .select2-results__options {
+		max-height : none;
+	}
+  .wpcf7-form{
+    .form-submit-wrapper{
+      @include break(desktop){
+        margin-top: 15px;
+      }
+      @include break(small){
+        margin-top: 20px;
+      }
+    }
+    .wpcf7-submit{
+      @include break(desktop){
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      @include break(small){
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+  
+}
+.search-results, .blog, .archive{
+  .block-form-resources{
+    @include break(tablet){
+      margin-bottom: 75px;
+    }
+    @include break(s-small){
+      margin-bottom: 10px;
+      position: relative;
+    }
+    &__container{
+      @include break(tablet){
+        padding-left: 45px;
+        padding-right: 45px;
+      }
+      @include break(s-small){
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+  .our-offices-section.our-offices-section-grey{
+    @include break(s-small){
+      background-color: $white;
+    }
+  }
+}

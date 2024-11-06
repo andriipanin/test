@@ -1,0 +1,385 @@
+.search{
+  #sort-by{
+    display: none !important;
+  }
+  .ais-SearchBox-form{
+    position: relative;
+  }
+  #algolia-search-box input{
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    line-height: 24px;
+    color: $navy;
+    padding: 0 45px 0 20px;
+    border-radius: 75px;
+    background-color: $white;
+    border: 0;
+    display: block;
+    &::placeholder{
+      color: $navy;
+    }
+  }
+  #algolia-search-box{
+    margin-bottom: 0;
+  }
+  .ais-SearchBox-submit{
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 18px;
+    height: 19px;
+    background-color: transparent;
+    border: 0;
+    z-index: 10;
+    padding: 0;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='19' viewBox='0 0 18 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.75 15.1429C11.4779 15.1429 14.5 11.9769 14.5 8.07143C14.5 4.16599 11.4779 1 7.75 1C4.02208 1 1 4.16599 1 8.07143C1 11.9769 4.02208 15.1429 7.75 15.1429Z' stroke='%230D2D5F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.8125 13.375L16.75 17.5' stroke='%230D2D5F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    svg{
+      display: none;
+    }
+  }
+  #ais-facets{
+    display: none;
+  }
+  .ais-Hits{
+    max-width: 1270px;
+    @include break(large1470) {
+      max-width: 1070px;
+    }
+    &-list{
+      list-style-type: none;
+    }
+    &-item{
+      margin-bottom: 60px;
+      @include break(tablet){
+        margin-bottom: 35px;
+      }
+      @include break(s-small){
+        margin-bottom: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      @include break(small-360){
+        padding-left: 0;
+        padding-right: 0;
+      }
+      &::marker{
+        content: '';
+      }
+    }
+    .ais-hits{
+      &--article{
+    
+      }
+      &--content{
+        position: relative;
+      }
+      &--title{
+        text-align: left;
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 10px;
+      }
+      &--date{
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 22px;
+        color: #ACACAC;
+        @include break(tablet){
+          font-size: 14px;
+          line-height: 19px;
+        }
+        @include break(s-small){
+          font-size: 16px;
+          line-height: 22px;
+          margin-bottom: 12px;
+        }
+      }
+      &--title-link{
+        color: $navy;
+        text-decoration: none;
+        transition: .3s linear;
+        &:hover{
+          color: $purple;
+        }
+      }
+      &--excerpt{
+        max-width: 1175px;
+        @include break(large1470) {
+          max-width: 975px;
+        }
+        margin-bottom: 16px;
+        p{
+          font-size: 20px;
+          line-height: 27px;
+          margin: 0;
+          padding: 0;
+          @include break(tablet){
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+      }
+      &--tags{
+        display: flex;
+        flex-wrap: wrap;
+        padding-right: 90px;
+        @include break(s-small){
+          padding-right: 0;
+        }
+      }
+      &--tag{
+        background-color: $violet;
+        border-radius: 13px;
+        padding: 3px 15px;
+        font-weight: 800;
+        font-size: 13px;
+        line-height: 18px;
+        text-transform: capitalize;
+        margin-top: 10px;
+        &:not(:last-child){
+          margin-right: 10px;
+        }
+      }
+      &--link-wrapper{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        @include break(s-small){
+          position: relative;
+          right: auto;
+          bottom: auto;
+          margin-bottom: 10px;
+        }
+      }
+      &--link{
+        position: relative;
+        font-size: 15px;
+        line-height: 20px;
+        color: $purple;
+        text-decoration: none;
+        @include break(tablet){
+          font-size: 16px;
+          line-height: 22px;
+        }
+        &:hover::after{
+          width: 0;
+        }
+        &::after{
+          content: '';
+          display: block;
+          width: 100%;
+          position: absolute;
+          height: 1px;
+          left: 50%;
+          top: 100%;
+          transform: translateX(-50%);
+          background-color: $purple;
+          transition: .3s linear;
+        }
+      }
+    }
+  }  
+  #algolia-pagination{
+    margin-top: 90px;
+    .ais-Pagination--noRefinement{
+      display: none;
+    }
+    .ais-Pagination-list{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .ais-Pagination-item--lastPage,
+    .ais-Pagination-item--firstPage,
+    li::after{
+      display: none !important;
+    }
+    .ais-Pagination-item{
+      margin: 0 10px;
+      padding: 0;
+      height: 20px;
+      &--selected{
+        .ais-Pagination-link{
+          color: $purple;
+          font-weight: 700;
+        }
+      }
+    }
+    .ais-Pagination-link{
+      text-decoration: none;
+      color: $navy;
+      display: block;
+      font-size: 15px;
+      line-height: 20px;
+      transition: .3s linear;
+      &:hover{
+        color: $purple;
+      }
+    }
+    .ais-Pagination-item--previousPage,
+    .ais-Pagination-item--nextPage{
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      border: 1px solid $purple;
+      padding: 0;
+      margin-bottom: 0;
+      cursor: pointer;
+      transition: .3s linear;
+      background-repeat: no-repeat;
+      background-position: center;
+      @include break(s-small){
+        width: 33px;
+        height: 33px;
+        background-size: auto 19px;
+      } 
+      a{
+        display: none;
+      }
+      &:hover{
+        background-color: $purple;
+      }
+    }
+    .ais-Pagination-item--previousPage{
+      margin-right: 10px;
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='29' viewBox='0 0 16 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.1055 27.1504L1.66039 14.7053L14.1055 2.26023' stroke='%23744BDA' stroke-width='3.1' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      &:hover{
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='29' viewBox='0 0 16 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.1055 27.1504L1.66039 14.7053L14.1055 2.26023' stroke='white' stroke-width='3.1' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      }
+      @include break(s-small){
+        margin-right: 5px;
+      }
+    }
+    .ais-Pagination-item--nextPage{
+      margin-left: 10px;
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='29' viewBox='0 0 16 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.89453 27.1494L14.3396 14.7043L1.89453 2.25926' stroke='%23744BDA' stroke-width='3.1' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      &:hover{
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='29' viewBox='0 0 16 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.89453 27.1494L14.3396 14.7043L1.89453 2.25926' stroke='white' stroke-width='3.1' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      }
+      @include break(s-small){
+        margin-left: 5px;
+      }
+    }
+  }
+  .resources-search-section{
+    position: relative;
+    .resources-search-section-anchor{
+      position: absolute;
+      top: -70px;
+      left: 0;
+      width: 100%;
+    }
+  }
+  #ais-main{
+    padding: 0 !important;
+  }
+  #ais-wrapper{
+    margin-bottom: 105px;
+    @include break(tablet){
+      padding-left: 45px;
+      padding-right: 45px;
+      margin-bottom: 55px;
+    }
+    @include break(s-small){
+      padding-left: 35px;
+      padding-right: 35px;
+      margin-bottom: 65px;
+    }
+    @include break(small-360){
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+
+#ais-main{
+  #facet-tags{
+    margin-top: 55px;
+    margin-bottom: 65px;
+    @include break(tablet){
+      margin-top: 45px;
+      margin-bottom: 45px;
+    }
+    @include break(s-small){
+      margin-top: 55px;
+      margin-bottom: 50px;
+    }
+    .ais-RefinementList-list{
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 800px;
+      @include break(large1650){
+        max-width: 700px;
+      }
+      @include break(large1470){
+        max-width: 500px;
+      }
+      @include break(tablet){
+        max-width: 600px;
+      }
+      .ais-RefinementList-item{
+        margin-bottom: 15px;
+        padding: 0;
+        list-style: none;
+        &::after{
+          display: none;
+        }
+        @include break(tablet){
+          margin-bottom: 20px;
+        }
+        @include break(s-small){
+          margin-bottom: 12px;
+        }
+        &:not(:last-child){
+          margin-right: 15px;
+          @include break(tablet){
+            margin-right: 20px;
+          }
+          @include break(s-small){
+            margin-right: 16px;
+          }
+        }
+        &--selected{
+          .ais-RefinementList-label{
+            background-color: $purple;
+            color: $white;
+          }
+         
+        }
+      }
+      .ais-RefinementList-label{
+        padding: 5px 14px;
+        color: $purple;
+        display: block;
+        border: 1px solid $purple;
+        border-radius: 25px;
+        background-color: $white;
+        letter-spacing: 0.02em;
+        font-size: 12px;
+        text-transform: capitalize;
+        line-height: 16px;
+        cursor: pointer;
+        transition: .3s linear;
+        @include break(tablet){
+          font-size: 13px;
+          line-height: 18px;
+        }
+        &:hover{
+          background-color: $purple;
+          color: $white;
+        }
+        input{
+          display: none;
+        }
+      }
+      .ais-RefinementList-count{
+        display: none;
+      }
+    }
+  }
+}

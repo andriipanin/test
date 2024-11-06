@@ -1,0 +1,133 @@
+.blog-top-banner{
+  @include break(s-small) {
+    max-height: none;
+    min-height: auto;
+    height: auto;
+    padding-top: 320px;
+    padding-bottom: 0;
+  }
+	&:after{
+		background: none;
+		animation: none;
+		//background: url("data:image/svg+xml,%3Csvg width='2347' height='96' viewBox='0 0 2347 96' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1998.76 28.296C2080.21 47.6401 2172.5 69.5791 2347 69.5791V96H0V69.5664H6.83011C181.294 69.5664 273.624 47.6274 355.053 28.2833C421.312 12.5399 473.676 0.0990609 591.161 0.0369811H592.089C595.471 0.0369811 598.771 0.0369811 601.988 0.0369811C607.201 0.0369811 612.283 0.095092 617.232 0.210974C718.013 1.87471 767.568 13.6327 829.076 28.2463C903.625 45.9515 987.306 65.8414 1134.82 69.082H1134.91L1142.21 69.2311C1148.42 69.3304 1154.74 69.409 1161.18 69.4669C1166.47 69.4669 1171.83 69.488 1177.26 69.5294C1351.14 69.4549 1443.29 47.5531 1524.56 28.2463C1590.99 12.4656 1643.45 0 1761.59 0C1879.73 0 1932.34 12.5153 1998.76 28.296Z' fill='white'/%3E%3C/svg%3E%0A") 0 100% repeat-x;
+		//height: 96px;
+		@include break(large1370){
+			//background-image: url("data:image/svg+xml,%3Csvg width='2097' height='67' viewBox='0 0 2097 67' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M174.797 25.5143C131.098 38.2718 87.3991 51.0295 0 51.0295V66.5428H349H1748H2097V51.0295C2009.6 51.0295 1965.9 38.2718 1922.2 25.5144C1878.6 12.7857 1835 0.0571081 1748 0.000191593V0C1747.9 0 1747.8 1.59601e-05 1747.71 4.78626e-05C1747.61 1.59603e-05 1747.51 0 1747.41 0C1660.02 0 1616.32 12.7561 1572.62 25.5128C1528.97 38.2557 1485.31 50.9992 1398.1 51.0294C1310.89 50.9992 1267.24 38.256 1223.59 25.5132C1179.89 12.7564 1136.19 0 1048.79 0C1048.7 0 1048.6 1.59589e-05 1048.5 4.78589e-05C1048.4 1.59591e-05 1048.3 0 1048.21 0C960.812 0 917.113 12.7564 873.412 25.5132C829.76 38.256 786.105 50.9992 698.897 51.0294C611.687 50.9992 568.031 38.2557 524.377 25.5128C480.676 12.7561 436.977 0 349.586 0C349.488 0 349.391 1.59601e-05 349.293 4.78624e-05C349.195 1.59599e-05 349.098 0 349 0V0.000191593C261.997 0.0571081 218.397 12.7857 174.797 25.5143Z' fill='white'/%3E%3C/svg%3E%0A");
+			//height: 67px;
+		}
+    @include break(s-small){
+      bottom: auto;
+      top: 254px;
+    }
+  }
+  &__image{
+    @include break(s-small){
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 310px;
+      min-height: auto;
+      transform: translateX(0);
+    }
+  }
+  &__container{
+    text-align: left;
+    @include break(s-small){
+      position: relative;
+      left: auto;
+      transform: translateX(0);
+      padding-top: 20px;
+      padding-bottom: 0;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+  &__content{
+    width: 100%;
+  }
+  &__category-wrapper{
+    @include break(tablet){
+      margin-bottom: 6px;
+    }
+    @include break(s-small){
+      margin-bottom: 10px;
+    }
+  }
+  &__category{
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $white;
+    position: relative;
+    text-decoration: none;
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 0;
+      height: 1px;
+      background-color: $white;
+      transition: .3s linear;
+    }
+    &:hover::before{
+      width: 100%;
+    }
+    @include break(tablet){
+      font-size: 16px;
+      line-height: 26px;
+    }
+    @include break(s-small){
+      color: $navy;
+    }
+  }
+  &__back{
+    margin-bottom: 25px;
+    width: 11px;
+    height: 21px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    @include break(tablet){
+      margin-bottom: 10px;
+    }
+    @include break(small){
+      display: none;
+    }
+  }
+  &__title{
+    font-size: 48px;
+    line-height: 57px;
+    margin-bottom: 5px;
+    max-width: 1000px;
+    @include break(large1650){
+      max-width: 875px;
+    }
+    @include break(tablet){
+      font-size: 35px;
+      line-height: 42px;
+      margin-bottom: 12px;
+    }
+    @include break(s-small){
+      color: $navy;
+      font-size: 30px;
+      line-height: 34px;
+      margin-bottom: 20px;
+    }
+  }
+  &__author{
+    font-size: 20px;
+    line-height: 35px;
+    color: $white;
+    @include break(tablet){
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @include break(s-small){
+      color: $navy;
+    }
+  }
+}
