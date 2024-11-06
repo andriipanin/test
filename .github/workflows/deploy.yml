@@ -32,5 +32,5 @@ jobs:
           rsync -avz --delete ./ "$REMOTE_USER@$REMOTE_SERVER:$REMOTE_PATH"
 
           # Опционально: перезапуск сервера или очистка кэша, если необходимо
-          ssh "$REMOTE_USER@$REMOTE_SERVER" 'sudo systemctl restart nginx'
+          #ssh "$REMOTE_USER@$REMOTE_SERVER" 'sudo systemctl restart nginx'
 
