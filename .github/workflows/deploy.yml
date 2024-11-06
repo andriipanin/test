@@ -20,6 +20,6 @@ jobs:
 
       - name: Copy index.html to server
         run: |
-          scp -o StrictHostKeyChecking=no index.html ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
+          scp -o StrictHostKeyChecking=no wp-content ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
          # rsync -avz --delete ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
 
