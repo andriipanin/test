@@ -20,6 +20,6 @@ jobs:
 
       - name: Copy wp_content to server
         run: |
-         # scp -o StrictHostKeyChecking=no index.html ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
-          rsync -avz --delete "ssh -o StrictHostKeyChecking=no" wp_content ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
+          scp -o StrictHostKeyChecking=no -r wp-content ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
+#          rsync -avz --delete "ssh -o StrictHostKeyChecking=no" wp_content ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
 
