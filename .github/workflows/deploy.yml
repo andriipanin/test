@@ -3,8 +3,8 @@ name: Deploy wp-content to Server
 on:
   push:
     branches:
-      - staging  # Запускаем Action при каждом пуше в ветку staging
-.
+      - main  # Запускаем Action при каждом пуше в ветку staging
+
 
 jobs:
   deploy:
