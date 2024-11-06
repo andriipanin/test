@@ -1,9 +1,9 @@
-name: Deploy to Remote Server
+name: Deploy index.html to Server
 
 on:
   push:
     branches:
-      - main
+      - main  # Запускаем Action при каждом пуше в ветку main. Измените при необходимости.
 
 jobs:
   deploy:
@@ -18,27 +18,8 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
 
-    #  - name: Checkout Repository
-#        uses: actions/checkout@v2
-
-      - name: Deploy to Remote Server via SSH
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
-          REMOTE_SERVER: ${{ secrets.SSH_HOST }}
-          REMOTE_USER: ${{ secrets.SSH_USER }}
-          REMOTE_PATH: ${{ secrets.TARGET_PATH}}
+      - name: Copy index.html to server
         run: |
-          # Добавляем SSH-ключ для доступа к серверу
-          #          mkdir -p ~/.ssh
-          #          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          #          chmod 600 ~/.ssh/id_rsa
-
-          # Проверяем подключение к серверу
-          ssh -o StrictHostKeyChecking=no "$REMOTE_USER@$REMOTE_SERVER" 'echo "SSH connection successful"'
-
-          # Копируем файлы на удалённый сервер с помощью rsync
-          rsync -avz --delete ./ "$REMOTE_USER@$REMOTE_SERVER:$REMOTE_PATH"
-
-          # Опционально: перезапуск сервера или очистка кэша, если необходимо
-          #ssh "$REMOTE_USER@$REMOTE_SERVER" 'sudo systemctl restart nginx'
+          scp -o StrictHostKeyChecking=no index.html ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
+         # rsync -avz --delete ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
 
