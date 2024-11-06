@@ -1,9 +1,10 @@
-name: Deploy index.html to Server
+name: Deploy wp-content to Server
 
 on:
   push:
     branches:
-      - main  # Запускаем Action при каждом пуше в ветку main. Измените при необходимости.
+      - staging  # Запускаем Action при каждом пуше в ветку staging
+.
 
 jobs:
   deploy:
@@ -18,8 +19,7 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
 
-      - name: Copy wp_content to server
+      - name: Copy wp-content to server
         run: |
           scp -o StrictHostKeyChecking=no -r wp-content ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
-#          rsync -avz --delete "ssh -o StrictHostKeyChecking=no" wp_content ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
 
