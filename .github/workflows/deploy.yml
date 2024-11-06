@@ -15,10 +15,10 @@ jobs:
 
       - name: Deploy to Remote Server via SSH
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          REMOTE_SERVER: ${{ secrets.REMOTE_SERVER }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          REMOTE_PATH: ${{ secrets.REMOTE_PATH}}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          REMOTE_SERVER: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          REMOTE_PATH: ${{ secrets.TARGET_PATH}}
         run: |
           # Добавляем SSH-ключ для доступа к серверу
           mkdir -p ~/.ssh
