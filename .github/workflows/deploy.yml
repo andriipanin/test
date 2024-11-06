@@ -21,9 +21,9 @@ jobs:
           REMOTE_PATH: ${{ secrets.TARGET_PATH}}
         run: |
           # Добавляем SSH-ключ для доступа к серверу
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+#          mkdir -p ~/.ssh
+#          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+#          chmod 600 ~/.ssh/id_rsa
 
           # Проверяем подключение к серверу
           ssh -o StrictHostKeyChecking=no "$REMOTE_USER@$REMOTE_SERVER" 'echo "SSH connection successful"'
