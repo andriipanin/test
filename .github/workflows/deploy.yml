@@ -22,8 +22,8 @@ jobs:
       - name: Run command on remote server
         uses: D3rHase/ssh-command-action@v0.2.2
         with:
-          host: $SSH_HOST
-          user: $SSH_USER
+          host: "18.206.91.6"
+          user: "webdata"
           private_key: ${{secrets.SSH_KEY}}
           command: |
             cd $TARGET_PATH
