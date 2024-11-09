@@ -28,6 +28,7 @@ jobs:
           private_key: ${{secrets.SSH_KEY}}
           command: |
             cd /var/www/html/test/test
+            touch hello.txt
             git pull origin main
 
 
