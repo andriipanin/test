@@ -27,6 +27,8 @@ jobs:
           private_key: ${{secrets.SSH_KEY}}
           command: |
             cd $TARGET_PATH
+            git pull
+
 
 
         #https://github.com/webfactory/ssh-agent
