@@ -13,7 +13,7 @@ jobs:
     env:
       SSH_USER: "webdata"  # replace with the actual SSH user
       SSH_HOST: "18.206.91.6"   # replace with the actual IP of your server
-      TARGET_PATH: "/var/www/html/test"  # replace with the actual target path
+      TARGET_PATH: "/var/www/html/test/test"  # replace with the actual target path
 
     steps:
       - name: Checkout repository
@@ -29,5 +29,8 @@ jobs:
       - name: Copy wp-content to server
         run: |
           #scp -o StrictHostKeyChecking=no -r wp-content ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
-          scp -o StrictHostKeyChecking=no -r wp-content $SSH_USER@$SSH_HOST:$TARGET_PATH
+          #scp -o StrictHostKeyChecking=no -r wp-content $SSH_USER@$SSH_HOST:$TARGET_PATH
+          cd $TARGET_PATH
+          git clone
+
 
