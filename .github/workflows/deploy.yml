@@ -22,7 +22,7 @@ jobs:
       - name: Run command on remote server
         uses: D3rHase/ssh-command-action@v0.2.2
         with:
-          host: "18.206.91.6"
+          host: "18.206.64.165"
           user: "webdata"
           private_key: ${{secrets.SSH_KEY}}
           command: |
