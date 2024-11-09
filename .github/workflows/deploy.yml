@@ -19,18 +19,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Run command on remote server
+        uses: D3rHase/ssh-command-action@v0.2.2
+        with:
+          host: $SSH_HOST
+          user: $SSH_USER
+          private_key: ${{secrets.SSH_KEY}}
+          command: |
+            cd $TARGET_PATH
+
 
         #https://github.com/webfactory/ssh-agent
-      - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.9.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_KEY }}
+#      - name: Set up SSH
+#        uses: webfactory/ssh-agent@v0.9.0
+#        with:
+#          ssh-private-key: ${{ secrets.SSH_KEY }}
 
-      - name: Copy wp-content to server
-        run: |
-          #scp -o StrictHostKeyChecking=no -r wp-content ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
-          #scp -o StrictHostKeyChecking=no -r wp-content $SSH_USER@$SSH_HOST:$TARGET_PATH
-          cd $TARGET_PATH
-          git clone
+#      - name: Copy wp-content to server
+#        run: |
+#          #scp -o StrictHostKeyChecking=no -r wp-content ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
+#          #scp -o StrictHostKeyChecking=no -r wp-content $SSH_USER@$SSH_HOST:$TARGET_PATH
+#          cd $TARGET_PATH
+#          git clone
 
 
