@@ -11,14 +11,15 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      SSH_USER: "webdata"  # replace with the actual SSH user
-      SSH_HOST: "18.206.91.6"   # replace with the actual IP of your server
+#      SSH_USER: "webdata"  # replace with the actual SSH user
+#      SSH_HOST: "18.206.91.6"   # replace with the actual IP of your server
       TARGET_PATH: "/var/www/html/test/test"  # replace with the actual target path
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+#https://github.com/D3rHase/ssh-command-action
       - name: Run command on remote server
         uses: D3rHase/ssh-command-action@v0.2.2
         with:
@@ -26,8 +27,8 @@ jobs:
           user: "webdata"
           private_key: ${{secrets.SSH_KEY}}
           command: |
-            cd "$TARGET_PATH";
-            git pull;
+            cd /var/www/html/test/test
+            git pull
 
 
 
