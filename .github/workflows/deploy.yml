@@ -21,15 +21,15 @@ jobs:
 
 #https://github.com/D3rHase/ssh-command-action
       - name: Run command on remote server
-        uses: D3rHase/ssh-command-action@v0.2.2
+        uses: D3rHase/ssh-command-action@v0.3
         with:
           host: "18.206.64.165"
           user: "webdata"
           private_key: ${{secrets.SSH_KEY}}
           command: |
-            cd /var/www/html/test/test
-            touch hello.txt
-            git pull origin main
+            cd /var/www/html/test/test/;
+            touch hello.txt;
+            git pull origin main;
 
 
 
