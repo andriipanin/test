@@ -26,8 +26,8 @@ jobs:
           user: "webdata"
           private_key: ${{secrets.SSH_KEY}}
           command: |
-            cd $TARGET_PATH
-            git pull
+            cd "$TARGET_PATH";
+            git pull;
 
 
 
